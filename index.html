@@ -7,13 +7,43 @@
         <link href="styles.css" rel="stylesheet">
         <meta charset="UTF-8">
         <title>centralized lubrication systems</title>
+
+        <style>
+
+#a_drop:hover img[src = "pixlr-bg-result.png"] {
+  animation: pulsing 2s infinite;
+  animation-play-state: running;
+}
+
+
+
+@keyframes pulsing {
+  0% {
+    transform: scale(1, 1)
+  }
+  99% {
+    transform: scale(2.0, 1.3);
+  }
+
+  100% {
+    transform: scale(0, 0);
+  }
+}
+</style>
+
     </head>
 
 
         <body>
             <header>
                     <a href="#"  title="На главную" >
-                        <img src="logo.png" alt="logotype" style="width:700px; height: 190px;"> <div class="btn-group"> <h1 style="font-size: 5vw; font-family: Mistral"> централизованные системы смазки </h1></div>
+                        <div id="a_drop" style="position: relative; display: inline-block">
+                            <img src="logo.JPG" alt="logotype" style="width:700px; height: 190px;"> <div class="btn-group">
+                            <div  style=" position: absolute; top: -50px; right: 530px; font-size: 13px; color:blue ">
+                                <img src="pixlr-bg-result.png" alt="logotype" >
+                            </div>
+                        </div>
+                            <h1 style="font-size: 5vw; font-family: Mistral; display: inline-block"> централизованные системы смазки </h1></div>
                     </a>
 
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="12000">
@@ -184,6 +214,7 @@ $(".carousel").swipe({
 function bigImg(x) {
   x.style.height = "550px";
   x.style.width = "450px";
+  img.style.height = "550px";
 }
 
 function normalImg(x) {
