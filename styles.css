@@ -59,8 +59,7 @@ footer
 
 
 .icon:hover img {
-  font-size: 10vw;
-  transition: 1s;
+  transition: 0.7s;
   transform: scale(1.2);
 }
 
