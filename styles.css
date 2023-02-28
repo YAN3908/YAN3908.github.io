@@ -92,3 +92,14 @@ img[src = "pixlr-bg-result.png"] {
     border-color: rgba(183, 197, 255, 0.4);
 
 }
+
+.headcontact
+{
+margin: 0px 0px 10px 10px;
+}
+@media (min-width: 1440px) {
+    .headcontact
+    {
+        display: inline-block;
+    }
+}
