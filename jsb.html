@@ -1,21 +1,56 @@
-<html lang="ru">
+<html lang="en">
     <head>
+        <link rel="icon" href="smal_icon.ico" type="image/ico">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link href="styles.css" rel="stylesheet">
+        <meta charset="UTF-8">
         <title>centralized lubrication systems</title>
+
     </head>
+
 
     <body>
         <header>
-            <a href="index.html"  title="На главную" >
-                <img src="logo.png" alt="logotype" style="width:700px; height: 190px;"> <div class="btn-group"> <h1 style="font-size: 350%; font-family: Mistral"> централизованные системы смазки </h1></div>
+            <select style=" position: absolute; top: 170px; left: 10px; z-index: 1; height: 35px;" class="change-lang">
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="ua">UA</option>
+                <option value="ru" selected>RU</option>
+            </select>
+            <a class="a-lang" href="index.html"  title="На главную" >
+                <div id="a_drop" style="position: relative; display: inline-block">
+                    <img src="logo.JPG" alt="logotype" style="width:700px; height: 190px;">
+                    <div class="btn-group">
+                        <div  style=" position: absolute; top: -50px; right: 530px; font-size: 13px; color:blue ">
+                        <img src="pixlr-bg-result.png" alt="logotype" >
+                        </div>
+                </div>
+                    <h1 class="lng-unit" style="font-size: 350%; font-family: Mistral; display: inline-block"> centralized lubrication systems </h1>
+                </div>
             </a>
+
+            <div style="position: absolute; top: 25px; right: 2%; font-size: 25px; color:blue ">
+                <div class="headcontact">
+                    <img src="/flag/ukraine_flag.ico"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-inbound-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0z"/>
+                    </svg><a href="tel:+380670107273"> +380670107273 </a>
+                </div>
+                <div class="headcontact">
+                    <img src="/flag/canada_flag.ico"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-inbound-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0z"/>
+                    </svg><a href="tel:+380670107273"> +14385044412</a>
+                </div>
+                <div class="headcontact">
+                    <img src="/flag/email.ico">
+                    <a href=mailto:yan3908@ukr.net>yan3908@ukr.net</a>
+                </div>
+            </div>
         </header>
 
         <main>
             <h1> JSB 456HT</h1>
             <div class= "foto">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide my-carousel" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -76,7 +111,56 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="JS/bootstrap-swipe-carousel.js"></script>
+<script src="JS/lang.js"></script>
 
+<script>
+  $('.my-carousel').carousel().swipeCarousel({
+  // options here
+});
+const langArrText = {
+    "unit" :  {
+        "ru": "Довольно сложная система из-за большого количества рычагов на стреле, с разными по размерам и нагружености узлами трения, которые соответственно требуют различные дозы смазочного материала и для обеспечения расчетных объёмов смазочного материала пришлось использовать распределители с 14-16 отводами. Система установлена в 2015 году, на базе станции и моноблочных распределительных клапанов производства GRACO (США). Погрузчик за это время работал на погрузке угля, калия, погрузке фосфоритов, погрузке щепы и на зачистке трюмов и складов. За этот период износ узлов трения зафиксирован не был.",
+        "en": "A rather complex system due to the large number of levers on the boom, with friction units of different sizes and loads, which, accordingly, require different doses of lubricant, and distributors with 14-16 outlets had to be used to ensure the calculated volumes of lubricant. The system was installed in 2015, based on the station and monoblock distribution valves manufactured by GRACO (USA). The loader during this time worked on loading coal, potassium, loading phosphorites, loading wood chips and cleaning holds and warehouses. During this period, the wear of friction units was not recorded.",
+        "ua": "Досить складна система через велику кількість важелів на стрілі, з різними за розмірами та навантаженістю вузлами тертя, які відповідно вимагають різні дози мастильного матеріалу та для забезпечення розрахункових обсягів мастильного матеріалу довелося використовувати розподільники з 14-16 відводами. Система встановлена ​​у 2015 році, на базі станції та моноблочних розподільчих клапанів виробництва GRACO (США). Навантажувач за цей час працював на навантаженні вугілля, калію, навантаженні фосфоритів, навантаженні тріски та на зачистці трюмів та складів. За цей період зношування вузлів тертя зафіксовано не було.",
+        "fr": "Un système assez complexe en raison du grand nombre de leviers sur la flèche, avec des unités de friction de différentes tailles et charges, qui, par conséquent, nécessitent différentes doses de lubrifiant, et des distributeurs avec 14-16 sorties ont dû être utilisés pour assurer les volumes calculés de lubrifiant. Le système a été installé en 2015, basé sur la station et les vannes de distribution monobloc fabriquées par GRACO (USA). Pendant ce temps, le chargeur travaillait au chargement du charbon, du potassium, au chargement des phosphorites, au chargement des copeaux de bois et au nettoyage des cales et des entrepôts. Pendant cette période, l'usure des unités de friction n'a pas été enregistrée."
+}
+}
+const select = document.querySelector('select');
+const allLang = ['en', 'ru', 'ua', 'fr'];
+
+select.addEventListener('change', changeURLLanguage);
+
+// перенаправить на url с указанием языка
+function changeURLLanguage() {
+    let lang = select.value;
+    location.href = window.location.pathname + '#' + lang;
+    location.reload();
+}
+
+function changeLanguage() {
+    let hash = window.location.hash;
+
+    hash = hash.substr(1);
+<!--    console.log(hash);-->
+        if (!allLang.includes(hash)) {
+        location.href = window.location.pathname + '#en';
+        location.reload();
+        }
+        select.value = hash;
+
+var elements = document.querySelectorAll('.a-lang');
+elements.forEach(element => element.href += '#' + hash);
+
+
+        document.querySelector('title').innerHTML = langArr['unit'][hash];
+        document.documentElement.setAttribute('lang', hash)
+        document.querySelector('.lng-unit').innerHTML = langArr['unit'][hash];
+<!--        document.querySelector('.lng-unittext').innerHTML = langArrText['unit'][hash];-->
+    }
+changeLanguage();
+
+</script>
 
     </body>
 </html>

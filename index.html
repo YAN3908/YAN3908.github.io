@@ -19,7 +19,7 @@
                 <option value="ua">UA</option>
                 <option value="ru" selected>RU</option>
             </select>
-            <a href="index.html"  title="На главную" >
+            <a class="a-lang" href="index.html"  title="На главную" >
                 <div id="a_drop" style="position: relative; display: inline-block">
                     <img src="logo.JPG" alt="logotype" style="width:700px; height: 190px;">
                     <div class="btn-group">
@@ -122,49 +122,49 @@
  <main>
 
                    <div class="btn-group icon" role="toolbar" aria-label="Toolbar with button groups">
-                       <a  href="Gpompe.html" title="Почему ЦСС">
+                       <a class="a-lang" href="Gpompe.html" title="Почему ЦСС">
                             <h1> <strong>про смазку</strong> </h1>
                             <img src="preview.png"  alt="lube system preview">
                        </a>
                     </div>
 
                     <div class="btn-group icon" role="toolbar" aria-label="Toolbar with button groups">
-                        <a  href="CAT980.html" title="ЦСС CAT 980">
+                        <a class="a-lang" href="CAT980.html" title="ЦСС CAT 980">
                             <h1 > <strong>CAT 980</strong> </h1>
                             <img src="cat_980.png"  alt="lube system CAT 980">
                         </a>
                     </div>
 
                     <div class="btn-group icon" role="toolbar">
-                        <a  href="CAT966.html" title="ЦСС CAT 966">
+                        <a class="a-lang" href="CAT966.html" title="ЦСС CAT 966">
                             <h1 > <strong> CAT 966 </strong> </h1>
                             <img src="966.png"  alt="lube system CAT 966">
                         </a>
                     </div>
 
                     <div class="btn-group icon"  role="group" aria-label="Third group">
-                        <a  href="CAT908.html" title="ЦСС CAT 908">
+                        <a class="a-lang" href="CAT908.html" title="ЦСС CAT 908">
                             <h1 > <strong>CAT 908</strong> </h1>
                             <img src="908.png"  alt="lube system CAT 908">
                         </a>
                     </div>
 
                     <div class="btn-group icon" role="group" aria-label="Third group">
-                        <a  href="CAT924.html" title="ЦСС CAT 924">
+                        <a class="a-lang" href="CAT924.html" title="ЦСС CAT 924">
                             <h1 > <strong> CAT 924 </strong> </h1>
                             <img  src="924.png"  alt="lube system CAT 924">
                         </a>
                     </div>
 
                      <div class="btn-group icon" role="group" aria-label="Third group">
-                        <a  href="CAT320.html" title="ЦСС CAT 320D">
+                        <a class="a-lang" href="CAT320.html" title="ЦСС CAT 320D">
                             <h1 > <strong> CAT 320D </strong> </h1>
                             <img src="cat320d2.png"  alt="lube system CAT 320D2">
                         </a>
                     </div>
 
                     <div class="btn-group icon" role="group" aria-label="Third group">
-                        <a  href="CAT962.html" title="ЦСС CAT 962">
+                        <a class="a-lang" href="CAT962.html" title="ЦСС CAT 962">
                             <h1 > <strong> CAT 962 </strong> </h1>
                             <img src="962.png"  alt="lube system CAT 962">
                         </a>
@@ -172,21 +172,21 @@
 
 
                      <div class="btn-group icon" role="group" aria-label="Third group">
-                        <a  href="ZW310.html" title="Hitachi ZW-310">
+                        <a class="a-lang" href="ZW310.html" title="Hitachi ZW-310">
                             <h1 > <strong>  Hitachi ZW-310 </strong> </h1>
                             <img src="zw310.png"  alt="lube system Hitachi ZW-310">
                         </a>
                     </div>
 
                      <div class="btn-group icon" role="group" aria-label="Third group">
-                        <a  href="lx50.html" title="Hitachi LX-50">
+                        <a class="a-lang" href="lx50.html" title="Hitachi LX-50">
                             <h1 > <strong>   Hitachi LX-50 </strong> </h1>
                             <img src="LX50.png"  alt="lube system Hitachi LX-50">
                         </a>
                     </div>
 
                     <div class="btn-group icon" role="group" aria-label="Third group">
-                        <a  href="jsb.html" title="JCB-456нт">
+                        <a class="a-lang" href="jsb.html" title="JCB-456нт">
                             <h1 > <strong>  JCB-456нт </strong> </h1>
                             <img  src="JCB-456.png"  alt="lube system JCB-456нт">
                         </a>
@@ -233,28 +233,27 @@ function changeURLLanguage() {
 
 function changeLanguage() {
     let hash = window.location.hash;
+
     hash = hash.substr(1);
-    console.log(hash);
+<!--    console.log(hash);-->
         if (!allLang.includes(hash)) {
         location.href = window.location.pathname + '#en';
         location.reload();
         }
         select.value = hash;
 
-        document.querySelector('title').innerHTML = langArr['unit'][hash];
+var elements = document.querySelectorAll('.a-lang');
+elements.forEach(element => element.href += '#' + hash);
 
+
+        document.querySelector('title').innerHTML = langArr['unit'][hash];
         document.documentElement.setAttribute('lang', hash)
         document.querySelector('.lng-unit').innerHTML = langArr['unit'][hash];
-        document.querySelector('.lng-unittext').innerHTML = langArrText['unit'][hash];
+<!--        document.querySelector('.lng-unittext').innerHTML = langArrText['unit'][hash];-->
     }
 changeLanguage();
 
 </script>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
 
 
     </body>

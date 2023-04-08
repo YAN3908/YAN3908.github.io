@@ -17,7 +17,7 @@
                 <option value="ua">UA</option>
                 <option value="ru" selected>RU</option>
             </select>
-            <a href="index.html"  title="На главную" >
+            <a class="a-lang" href="index.html"  title="На главную" >
                 <div id="a_drop" style="position: relative; display: inline-block">
                     <img src="logo.JPG" alt="logotype" style="width:700px; height: 190px;">
                     <div class="btn-group">
@@ -123,8 +123,10 @@ function changeLanguage() {
         }
         select.value = hash;
 
-        document.querySelector('title').innerHTML = langArr['unit'][hash];
+var elements = document.querySelectorAll('.a-lang');
+elements.forEach(element => element.href += '#' + hash);
 
+        document.querySelector('title').innerHTML = langArr['unit'][hash];
         document.documentElement.setAttribute('lang', hash)
         document.querySelector('.lng-unit').innerHTML = langArr['unit'][hash];
         document.querySelector('.lng-unittext').innerHTML = langArrText['unit'][hash];
