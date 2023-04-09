@@ -54,10 +54,10 @@
         <div  class="carousel-item active">
             <div class="carouseli">
                 <div class="undercarusel" >
-                    <h1>Производительность</h1>
-                    <h2>1 Повышение уровня эксплуатационной готовности</h2>
-                    <h2>2 Сокращение количества незапланированных простоев</h2>
-                    <h2>3 Повышение рентабельности.</h2>
+                    <h1 class="ah1">Performance</h1>
+                    <h2 class="ah2">1 Increasing availability</h2>
+                    <h2 class="ah3">2 Reduce unplanned downtime</h2>
+                    <h2 class="ah4">3 Increasing profitability</h2>
                 </div>
             </div>
         </div>
@@ -65,11 +65,11 @@
         <div  class="carousel-item">
             <div class="carouseli">
                 <div class="undercarusel" >
-                    <h1> Экономические факторы</h1>
-                    <h2> 1 Снижение затрат на эксплуатационные материалы и специальные смазки.</h2>
-                    <h2>2 Снижение потребления энергии или расхода топлива из-за уменьшения трения.</h2>
-                    <h2> 3 Уменьшение расходов на ремонт</h2>
-                    <h2> 4 Снижение затрат благодаря автоматизации</h2>
+                    <h1 class="bh1"> Экономические факторы</h1>
+                    <h2 class="bh2"> 1 Снижение затрат на эксплуатационные материалы и специальные смазки.</h2>
+                    <h2 class="bh3">2 Снижение потребления энергии или расхода топлива из-за уменьшения трения.</h2>
+                    <h2 class="bh4"> 3 Уменьшение расходов на ремонт</h2>
+                    <h2 class="bh5"> 4 Снижение затрат благодаря автоматизации</h2>
                 </div>
             </div>
         </div>
@@ -217,7 +217,31 @@ const langArrText = {
         "en": "A rather complex system due to the large number of levers on the boom, with friction units of different sizes and loads, which, accordingly, require different doses of lubricant, and distributors with 14-16 outlets had to be used to ensure the calculated volumes of lubricant. The system was installed in 2015, based on the station and monoblock distribution valves manufactured by GRACO (USA). The loader during this time worked on loading coal, potassium, loading phosphorites, loading wood chips and cleaning holds and warehouses. During this period, the wear of friction units was not recorded.",
         "ua": "Досить складна система через велику кількість важелів на стрілі, з різними за розмірами та навантаженістю вузлами тертя, які відповідно вимагають різні дози мастильного матеріалу та для забезпечення розрахункових обсягів мастильного матеріалу довелося використовувати розподільники з 14-16 відводами. Система встановлена ​​у 2015 році, на базі станції та моноблочних розподільчих клапанів виробництва GRACO (США). Навантажувач за цей час працював на навантаженні вугілля, калію, навантаженні фосфоритів, навантаженні тріски та на зачистці трюмів та складів. За цей період зношування вузлів тертя зафіксовано не було.",
         "fr": "Un système assez complexe en raison du grand nombre de leviers sur la flèche, avec des unités de friction de différentes tailles et charges, qui, par conséquent, nécessitent différentes doses de lubrifiant, et des distributeurs avec 14-16 sorties ont dû être utilisés pour assurer les volumes calculés de lubrifiant. Le système a été installé en 2015, basé sur la station et les vannes de distribution monobloc fabriquées par GRACO (USA). Pendant ce temps, le chargeur travaillait au chargement du charbon, du potassium, au chargement des phosphorites, au chargement des copeaux de bois et au nettoyage des cales et des entrepôts. Pendant cette période, l'usure des unités de friction n'a pas été enregistrée."
-}
+},
+"ah1" :  {
+        "ru": "Производительность",
+        "en": "Performance",
+        "ua": "Продуктивність",
+        "fr": "Performance"
+},
+"ah2" :  {
+        "ru": "1 Повышение уровня эксплуатационной готовности",
+        "en": "1 Increasing availability",
+        "ua": "1 Підвищення рівня експлуатаційної готовності",
+        "fr": "1 Accroître la disponibilité"
+},
+"ah3" :  {
+        "ru": "2 Сокращение количества незапланированных простоев",
+        "en": "2 Reduce unplanned downtime",
+        "ua": "2 Скорочення кількості незапланованих простоїв",
+        "fr": "2 Réduisez les temps d'arrêt imprévus"
+},
+"ah4" :  {
+        "ru": "3 Повышение рентабельности",
+        "en": "3 Increasing profitability",
+        "ua": "3 Підвищення рентабельності",
+        "fr": "3 Augmenter la rentabilité"
+},
 }
 const select = document.querySelector('select');
 const allLang = ['en', 'ru', 'ua', 'fr'];
@@ -249,7 +273,13 @@ elements.forEach(element => element.href += '#' + hash);
         document.querySelector('title').innerHTML = langArr['unit'][hash];
         document.documentElement.setAttribute('lang', hash)
         document.querySelector('.lng-unit').innerHTML = langArr['unit'][hash];
-<!--        document.querySelector('.lng-unittext').innerHTML = langArrText['unit'][hash];-->
+        document.querySelector('.ah1').innerHTML = langArrText['ah1'][hash];
+           for (let key in langArrText) {
+        let elem = document.querySelector('.' + key);
+        if (elem) {
+            elem.innerHTML = langArrText[key][hash];
+        }
+        }
     }
 changeLanguage();
 
