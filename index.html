@@ -16,7 +16,7 @@
             <select style=" position: absolute; top: 170px; left: 10px; z-index: 1; height: 35px;" class="change-lang">
                 <option value="en">EN</option>
                 <option value="fr">FR</option>
-                <option value="ua">UA</option>
+                <option value="uk">UA</option>
                 <option value="ru" selected>RU</option>
             </select>
             <a class="a-lang" href="index.html"  title="На главную" >
@@ -65,11 +65,11 @@
         <div  class="carousel-item">
             <div class="carouseli">
                 <div class="undercarusel" >
-                    <h1 class="bh1"> Экономические факторы</h1>
-                    <h2 class="bh2"> 1 Снижение затрат на эксплуатационные материалы и специальные смазки.</h2>
-                    <h2 class="bh3">2 Снижение потребления энергии или расхода топлива из-за уменьшения трения.</h2>
-                    <h2 class="bh4"> 3 Уменьшение расходов на ремонт</h2>
-                    <h2 class="bh5"> 4 Снижение затрат благодаря автоматизации</h2>
+                    <h1 class="bh1"> Economic forces</h1>
+                    <h2 class="bh2">1 Reduced costs for consumables and special lubricants</h2>
+                    <h2 class="bh3">2 Reduced energy consumption or fuel consumption due to reduced friction</h2>
+                    <h2 class="bh4">3 Reduced repair costs</h2>
+                    <h2 class="bh5">4 Reduce costs through automation</h2>
                 </div>
             </div>
         </div>
@@ -77,12 +77,12 @@
         <div  class="carousel-item">
             <div class="carouseli">
                 <div class="undercarusel" >
-                    <h1>  Поддержание в исправном состоянии</h1>
-                    <h2>1 Увеличение ресурса оборудования</h2>
-                    <h2>2 Повышение надежности</h2>
-                    <h2>3 Минимизация поломок</h2>
-                    <h2> 4 Предотвращение недостаточной или избыточной смазки</h2>
-                    <h2> 5 Увеличение интервалов между техническими обслуживаниями</h2>
+                    <h1 class="ch1">  Поддержание в исправном состоянии</h1>
+                    <h2 class="ch2">1 Увеличение ресурса оборудования</h2>
+                    <h2 class="ch3">2 Повышение надежности</h2>
+                    <h2 class="ch4">3 Минимизация поломок</h2>
+                    <h2 class="ch5"> 4 Предотвращение недостаточной или избыточной смазки</h2>
+                    <h2 class="ch6"> 5 Увеличение интервалов между техническими обслуживаниями</h2>
                 </div>
             </div>
         </div>
@@ -90,10 +90,10 @@
         <div  class="carousel-item">
             <div class="carouseli">
                 <div class="undercarusel" >
-                    <h1> Безопасность</h1>
-                    <h2>1 Отсутствие ручной смазки в опасных и труднодоступных местах.</h2>
-                    <h2>2 Уменьшение загрязнений смазочными средствами (снижает опасность подскальзывания)</h2>
-                    <h2>3 Минимизация риска пожаров (для высокооборотных механизмов)</h2>
+                    <h1 class="dh1"> Безопасность</h1>
+                    <h2 class="dh2">1 Отсутствие ручной смазки в опасных и труднодоступных местах.</h2>
+                    <h2 class="dh3">2 Уменьшение загрязнений смазочными средствами (снижает опасность подскальзывания)</h2>
+                    <h2 class="dh4">3 Минимизация риска пожаров (для высокооборотных механизмов)</h2>
                 </div>
             </div>
         </div>
@@ -101,9 +101,9 @@
         <div  class="carousel-item">
             <div class="carouseli">
                 <div class="undercarusel" >
-                    <h1> Защита окружающей среды.</h1>
-                    <h2> 1 Снижение потребления энергии или расхода топлива из-за уменьшения трения</h2>
-                    <h2> 2 Минимизация воздействия на окружающую среду благодаря более эффективному использованию смазочных средств.</h2>
+                    <h1 class="eh1"> Защита окружающей среды.</h1>
+                    <h2 class="eh2"> 1 Снижение потребления энергии или расхода топлива из-за уменьшения трения</h2>
+                    <h2 class="eh3"> 2 Минимизация воздействия на окружающую среду благодаря более эффективному использованию смазочных средств.</h2>
                 </div>
             </div>
         </div>
@@ -123,7 +123,7 @@
 
                    <div class="btn-group icon" role="toolbar" aria-label="Toolbar with button groups">
                        <a class="a-lang" href="Gpompe.html" title="Почему ЦСС">
-                            <h1> <strong>про смазку</strong> </h1>
+                            <h1> <strong class="unit1">про смазку</strong> </h1>
                             <img src="preview.png"  alt="lube system preview">
                        </a>
                     </div>
@@ -208,43 +208,166 @@
 <script src="JS/lang.js"></script>
 
 <script>
+
+function changeBrouzerLanguage() {
+var userLang = navigator.language || navigator.userLanguage;
+<!--console.log(userLang);-->
+location.href = window.location.pathname + '#' + userLang.slice(0, 2);
+}
+        if (!window.location.hash) {
+            changeBrouzerLanguage();
+        }
+
+
   $('.my-carousel').carousel().swipeCarousel({
   // options here
 });
 const langArrText = {
-    "unit" :  {
-        "ru": "Довольно сложная система из-за большого количества рычагов на стреле, с разными по размерам и нагружености узлами трения, которые соответственно требуют различные дозы смазочного материала и для обеспечения расчетных объёмов смазочного материала пришлось использовать распределители с 14-16 отводами. Система установлена в 2015 году, на базе станции и моноблочных распределительных клапанов производства GRACO (США). Погрузчик за это время работал на погрузке угля, калия, погрузке фосфоритов, погрузке щепы и на зачистке трюмов и складов. За этот период износ узлов трения зафиксирован не был.",
-        "en": "A rather complex system due to the large number of levers on the boom, with friction units of different sizes and loads, which, accordingly, require different doses of lubricant, and distributors with 14-16 outlets had to be used to ensure the calculated volumes of lubricant. The system was installed in 2015, based on the station and monoblock distribution valves manufactured by GRACO (USA). The loader during this time worked on loading coal, potassium, loading phosphorites, loading wood chips and cleaning holds and warehouses. During this period, the wear of friction units was not recorded.",
-        "ua": "Досить складна система через велику кількість важелів на стрілі, з різними за розмірами та навантаженістю вузлами тертя, які відповідно вимагають різні дози мастильного матеріалу та для забезпечення розрахункових обсягів мастильного матеріалу довелося використовувати розподільники з 14-16 відводами. Система встановлена ​​у 2015 році, на базі станції та моноблочних розподільчих клапанів виробництва GRACO (США). Навантажувач за цей час працював на навантаженні вугілля, калію, навантаженні фосфоритів, навантаженні тріски та на зачистці трюмів та складів. За цей період зношування вузлів тертя зафіксовано не було.",
-        "fr": "Un système assez complexe en raison du grand nombre de leviers sur la flèche, avec des unités de friction de différentes tailles et charges, qui, par conséquent, nécessitent différentes doses de lubrifiant, et des distributeurs avec 14-16 sorties ont dû être utilisés pour assurer les volumes calculés de lubrifiant. Le système a été installé en 2015, basé sur la station et les vannes de distribution monobloc fabriquées par GRACO (USA). Pendant ce temps, le chargeur travaillait au chargement du charbon, du potassium, au chargement des phosphorites, au chargement des copeaux de bois et au nettoyage des cales et des entrepôts. Pendant cette période, l'usure des unités de friction n'a pas été enregistrée."
+    "unit1" :  {
+        "ru": "про смазку",
+        "en": "about lubrication",
+        "uk": "про змащення",
+        "fr": "à propos de la lubrification"
 },
 "ah1" :  {
         "ru": "Производительность",
         "en": "Performance",
-        "ua": "Продуктивність",
+        "uk": "Продуктивність",
         "fr": "Performance"
 },
 "ah2" :  {
         "ru": "1 Повышение уровня эксплуатационной готовности",
         "en": "1 Increasing availability",
-        "ua": "1 Підвищення рівня експлуатаційної готовності",
+        "uk": "1 Підвищення рівня експлуатаційної готовності",
         "fr": "1 Accroître la disponibilité"
 },
 "ah3" :  {
         "ru": "2 Сокращение количества незапланированных простоев",
         "en": "2 Reduce unplanned downtime",
-        "ua": "2 Скорочення кількості незапланованих простоїв",
+        "uk": "2 Скорочення кількості незапланованих простоїв",
         "fr": "2 Réduisez les temps d'arrêt imprévus"
 },
 "ah4" :  {
         "ru": "3 Повышение рентабельности",
         "en": "3 Increasing profitability",
-        "ua": "3 Підвищення рентабельності",
+        "uk": "3 Підвищення рентабельності",
         "fr": "3 Augmenter la rentabilité"
+},
+
+"bh1" :  {
+        "ru": "Экономические факторы",
+        "en": "Economic forces",
+        "uk": "Економічні чинники",
+        "fr": "Les forces économiques"
+},
+"bh2" :  {
+        "ru": "1 Снижение затрат на эксплуатационные материалы и специальные смазки",
+        "en": "1 Reduced costs for consumables and special lubricants",
+        "uk": "1 Зниження витрат на експлуатаційні матеріали та спеціальні мастила",
+        "fr": "1 Réduction des coûts de consommables et de lubrifiants spéciaux"
+},
+"bh3" :  {
+        "ru": "2 Снижение потребления энергии или расхода топлива из-за уменьшения трения",
+        "en": "2 Reduced energy consumption or fuel consumption due to reduced friction",
+        "uk": "2 Зниження споживання енергії або витрати палива через зменшення тертя",
+        "fr": "2 Réduction de la consommation d'énergie ou de carburant grâce à la réduction des frottements"
+},
+"bh4" :  {
+        "ru": "3 Уменьшение расходов на ремонт",
+        "en": "3 Reduced repair costs",
+        "uk": "3 Зменшення витрат на ремонт",
+        "fr": "3 Coûts de réparation réduits"
+},
+"bh5" :  {
+        "ru": "4 Снижение затрат благодаря автоматизации",
+        "en": "4 Reduce costs through automation",
+        "uk": "4 Зниження витрат завдяки автоматизації",
+        "fr": "4 Réduire les coûts grâce à l'automatisation"
+},
+
+"ch1" :  {
+        "ru": "Поддержание в исправном состоянии",
+        "en": "Always in good condition",
+        "uk": "Підтримка у справному стані",
+        "fr": "Toujours en bon état"
+},
+"ch2" :  {
+        "ru": "1 Увеличение ресурса оборудования",
+        "en": "1 Increasing the resource of equipment",
+        "uk": "1 Збільшення ресурсу обладнання",
+        "fr": "1 Augmenter le parc matériel"
+},
+"ch3" :  {
+        "ru": "2 Повышение надежности",
+        "en": "2 Improving reliability",
+        "uk": "2 Підвищення надійності",
+        "fr": "2 Amélioration de la fiabilité"
+},
+"ch4" :  {
+        "ru": "3 Минимизация поломок",
+        "en": "3 Minimize breakdowns",
+        "uk": "3 Мінімізація поломок",
+        "fr": "3 Minimiser les pannes"
+},
+"ch5" :  {
+        "ru": "4 Предотвращение недостаточной или избыточной смазки",
+        "en": "4 Preventing under or over lubrication",
+        "uk": "4 Запобігання недостатньому або надмірному змащуванню",
+        "fr": "4 Prévention de sous ou sur lubrification"
+},
+"ch6" :  {
+        "ru": "5 Увеличение интервалов между техническими обслуживаниями",
+        "en": "5 Extended maintenance intervals",
+        "uk": "5 Збільшення інтервалів між технічними обслуговуваннями",
+        "fr": "5 Intervalles de maintenance prolongés"
+},
+
+"dh1" :  {
+        "ru": "Безопасность",
+        "en": "Safety",
+        "uk": "Безпека",
+        "fr": "Sécurité"
+},
+"dh2" :  {
+        "ru": "1 Отсутствие ручной смазки в опасных и труднодоступных местах",
+        "en": "1 Lack of manual operation in dangerous and hard-to-reach places",
+        "uk": "1 Відсутність ручного обслуговування в небезпечних та важкодоступних місцях",
+        "fr": "1 Absence de fonctionnement manuel dans les endroits dangereux et difficiles d'accès"
+},
+"dh3" :  {
+        "ru": "2 Уменьшение загрязнений смазочными средствами (снижает опасность подскальзывания)",
+        "en": "2 Reduce contamination by lubricants (reduces the risk of slipping)",
+        "uk": "2 Зменшення забруднень мастильними засобами (знижує небезпеку підсковзування)",
+        "fr": "2 Réduit la contamination par les lubrifiants (réduit le risque de glissade)"
+},
+"dh4" :  {
+        "ru": "3 Минимизация риска пожаров (для высокооборотных механизмов)",
+        "en": "3 Minimizing the risk of fires (for high speed machines)",
+        "uk": "3 Мінімізація ризику пожеж (для високооборотних механізмів)",
+        "fr": "3 Minimiser le risque d'incendie (pour les machines à grande vitesse)"
+},
+
+"eh1" :  {
+        "ru": "Защита окружающей среды",
+        "en": "Environment protection",
+        "uk": "Захист навколишнього середовища",
+        "fr": "Protection de l'environnement"
+},
+"eh2" :  {
+        "ru": "1 Снижение потребления энергии или расхода топлива из-за уменьшения трения",
+        "en": "1 Reduced energy consumption or fuel consumption due to reduced friction",
+        "uk": "1 Зниження споживання енергії або витрати палива через зменшення тертя",
+        "fr": "1 Réduction de la consommation d'énergie ou de carburant grâce à un frottement réduit"
+},
+"eh3" :  {
+        "ru": "2 Минимизация воздействия на окружающую среду благодаря более эффективному использованию смазочных средств",
+        "en": "2 Minimize environmental impact through more efficient use of lubricants",
+        "uk": "2 Мінімізація впливу на довкілля завдяки більш ефективному використанню мастил",
+        "fr": "2 Minimiser l'impact environnemental grâce à une utilisation plus efficace des lubrifiants"
 },
 }
 const select = document.querySelector('select');
-const allLang = ['en', 'ru', 'ua', 'fr'];
+const allLang = ['en', 'ru', 'uk', 'fr'];
 
 select.addEventListener('change', changeURLLanguage);
 
