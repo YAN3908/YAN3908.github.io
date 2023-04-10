@@ -1,19 +1,55 @@
-<html lang="ru">
+<html lang="en">
     <head>
+        <link rel="icon" href="smal_icon.ico" type="image/ico">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link href="styles.css" rel="stylesheet">
+        <meta charset="UTF-8">
         <title>centralized lubrication systems</title>
+
     </head>
+
+
     <body>
         <header>
-            <a href="index.html"  title="На главную" >
-                <img src="logo.png" alt="logotype" style="width:700px; height: 190px;"> <div class="btn-group"> <h1 style="font-size: 350%; font-family: Mistral"> централизованные системы смазки </h1></div>
+            <select style=" position: absolute; top: 170px; left: 10px; z-index: 1; height: 35px;" class="change-lang">
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="uk">UA</option>
+                <option value="ru" selected>RU</option>
+            </select>
+            <a class="a-lang" href="index.html"  title="На главную" >
+                <div id="a_drop" style="position: relative; display: inline-block">
+                    <img src="logo.JPG" alt="logotype" style="width:700px; height: 190px;">
+                    <div class="btn-group">
+                        <div  style=" position: absolute; top: -50px; right: 530px; font-size: 13px; color:blue ">
+                        <img src="pixlr-bg-result.png" alt="logotype" >
+                        </div>
+                </div>
+                    <h1 class="lng-unit" style="font-size: 350%; font-family: Mistral; display: inline-block"> centralized lubrication systems </h1>
+                </div>
             </a>
+
+            <div style="position: absolute; top: 25px; right: 2%; font-size: 25px; color:blue ">
+                <div class="headcontact">
+                    <img src="/flag/ukraine_flag.ico"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-inbound-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0z"/>
+                    </svg><a href="tel:+380670107273"> +380670107273 </a>
+                </div>
+                <div class="headcontact">
+                    <img src="/flag/canada_flag.ico"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-inbound-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0z"/>
+                    </svg><a href="tel:+380670107273"> +14385044412</a>
+                </div>
+                <div class="headcontact">
+                    <img src="/flag/email.ico">
+                    <a href=mailto:yan3908@ukr.net>yan3908@ukr.net</a>
+                </div>
+            </div>
         </header>
         <main>
             <h1> CATERPILLAR 962</h1>
             <div class= "foto">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide my-carousel" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -40,8 +76,8 @@
             </div>
         </main>
         <footer>
-                <p>
-                    &nbsp &nbsp <nobr>Система установлена в 2015г. </nobr>  Собрана полностью из Б/У комплектующих GRONEVELD ранее применявшихся на дорожной технике. Давление нагнетания смазочного материала до 120bar, данное давление в системе и сама ее конструкция
+                <p class="lng-unittext" style="text-indent: 3ch;">
+                    Система установлена в 2015г. Собрана полностью из Б/У комплектующих GRONEVELD ранее применявшихся на дорожной технике. Давление нагнетания смазочного материала до 120bar, данное давление в системе и сама ее конструкция
                     позволяет использовать смазочный материал класом до EP-00 или еще жиже (при морозной погоде). Но машина и не используется в тяжелых условиях и этого ей достаточно. Система распределения работает по принципу инжекторов
                     (для каждого узла устанавливается свой отдельный инжектор) в связи с этим есть один плюс - можно точно
                     отрегулировать дозу смазочного материала для каждого отдельного узла трения, даже после того как система уже установлена.
@@ -49,10 +85,23 @@
 
         </footer>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="JS/bootstrap-swipe-carousel.js"></script>
 
+
+<script>
+const langArrText = {
+    "lng-unittext" :  {
+        "ru": "Система установлена в 2015г. Собрана полностью из Б/У комплектующих GRONEVELD ранее применявшихся на дорожной технике. Давление нагнетания смазочного материала до 120bar, данное давление в системе и сама ее конструкция позволяет использовать смазочный материал класом до EP-00 или еще жиже (при морозной погоде). Но машина и не используется в тяжелых условиях и этого ей достаточно. Система распределения работает по принципу инжекторов (для каждого узла устанавливается свой отдельный инжектор) в связи с этим есть один плюс - можно точно отрегулировать дозу смазочного материала для каждого отдельного узла трения, даже после того как система уже установлена.",
+        "en": "The system was installed in 2015. Completely assembled from used GRONEVELD components previously used on road equipment. Lubricant discharge pressure up to 120bar, this pressure in the system and its design itself allows the use of lubricants up to EP-00 or even thinner (in frosty weather). But the machine is not used in difficult conditions, and this is enough for her. The distribution system works on the principle of injectors (a separate injector is installed for each unit), in this regard, there is one plus - you can accurately adjust the dose of lubricant for each individual friction unit, even after the system has already been installed.",
+        "uk": "Система встановлена ​​у 2015р. Зібрана повністю з Б/У комплектуючих GRONEVELD, які раніше застосовувалися на дорожній техніці. Тиск нагнітання мастильного матеріалу до 120bar, даний тиск у системі та сама її конструкція дозволяє використовувати мастильний матеріал класом до EP-00 або ще рідше (при морозній погоді). Але машина і не використовується у важких умовах, і цього їй достатньо. Система розподілу працює за принципом інжекторів (для кожного вузла встановлюється свій окремий інжектор) у зв'язку з цим є один плюс – можна точно відрегулювати дозу мастильного матеріалу для кожного окремого вузла тертя, навіть після того, як система вже встановлена.",
+        "fr": "Le système a été installé en 2015. Entièrement assemblé à partir de composants GRONEVELD usagés précédemment utilisés sur les équipements routiers. Pression de refoulement du lubrifiant jusqu'à 120 bars, cette pression dans le système et sa conception elle-même permet l'utilisation de lubrifiants jusqu'à EP-00 ou même moins (par temps de gel). Mais la machine n'est pas utilisée dans des conditions difficiles, et cela lui suffit. Le système de distribution fonctionne sur le principe des injecteurs (un injecteur séparé est installé pour chaque unité), à cet égard, il y a un plus - vous pouvez ajuster avec précision la dose de lubrifiant pour chaque unité de friction individuelle, même après que le système a déjà été installée.",
+}
+}
+</script>
+<script src="JS/lang.js"></script>
 
     </body>
 </html>
