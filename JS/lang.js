@@ -18,6 +18,9 @@ const langArr = {
 
 }
 
+if (!window.location.search ==''){
+    location.href = window.location.href.split('?')[0];
+    }
 
 function changeBrouzerLanguage() {
 var userLang = navigator.language || navigator.userLanguage;
@@ -68,5 +71,9 @@ elements.forEach(element => element.href += '#' + hash);
             elem.innerHTML = langArrText[key][hash];
         }
         }
+    }
+if (!window.location.search ==''){
+    console.log(hash);
+    location.href = window.location.href.split('?')[0];
     }
 changeLanguage();
